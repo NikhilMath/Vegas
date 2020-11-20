@@ -1,19 +1,29 @@
-def main_menu
-    puts "welcome to the DPL Casino Roulette resort"
-    puts "please choose a number 1-36 or red/black"
-    user_bet
+require_relative "roulette"
+class Casino
+  def main_menu
+      puts "welcome to the DPL Casino resort"        
+      puts 'which game do you want to play, Slots, or Roulette?'
+         user_bet
+       end
+  def user_bet
+        choice = gets.chomp
+        if choice == 'roulette'
+            roulette = Roulette.new(player)
+        elsif choice == 'slots'
+            slots = Slots.new
+            # send to slots
+        else
+            puts 'please select either "sloths" or roulette"'
+        end
+    end
 end
-
-def user_bet
-    if user_bet == black
-
+casino = Casino.new        
+casino.main_menu
 
 
+# start on player next step
 
-main_menu
+# rand(10) => a random number between 0 and 9
 
-
-rand(10) => a random number between 0 and 9
-
-color = 100% payout (other than green)
-number = 3500% payout
+# color = 100% payout (other than green)
+# number = 3500% payout
