@@ -13,7 +13,7 @@ class Casino
             slots = Slots.new
             # send to slots
         else
-            puts 'please select either "sloths" or roulette"'
+            puts 'please select either "slots" or roulette"'
         end
     end
 end
