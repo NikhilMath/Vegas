@@ -7,8 +7,8 @@
 #person_1 = Person.new
 
 
-require_relative "roulette
-require_relative "casino
+#require_relative "roulette
+
 
 class Player
   attr_accessor :name, :age, :wallet
@@ -84,6 +84,25 @@ def decrease_losings(number)
     main_choices
   end 
   
+  def main_choices
+  puts "What would you like to do #{player_name}?"
+  puts "1. Show your winnings"
+  puts "2. Choose a differnt game"
+  puts "3. Leave the casino"
+  choice = gets.to_i
+  if choice == 1
+    bank_role
+  elsif choice == 2
+    roulette
+    slots
+   
+  elsif choice == 3
+    puts "Come back soon!"
+    exit
+  end
+  end
+  end
+  #main_menu
   #def buy_in
   ##def show_pets
   # puts "How much are you losing tonight? I mean, how much would you like?"
@@ -117,23 +136,3 @@ def decrease_losings(number)
   
 #end
 
-  def main_choices
-  puts "What would you like to do #{player_name}?"
-  puts "1. Decide your buy in?"
-  puts "2. Show your winnings"
-  #puts "3. Add a drink to your tab?"
-  puts "3. Leave the casino"
-  choice = gets.to_i
-  if choice == 1
-    buy_in
-    #show_pets
-  elsif choice == 2
-    show_wallet
-   
-  elsif choice == 3
-    puts "Come back soon!"
-    exit
-  end
-end
-end
-#main_menu

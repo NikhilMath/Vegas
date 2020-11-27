@@ -5,9 +5,11 @@
 
 
 require_relative "roulette"
+require_relative "player"
+
 class Casino
   def main_menu
-      puts "welcome to the Casino DPL Royal"        
+      #puts "welcome to the Casino DPL Royal"        
       puts 'Which game do you want to play, Slots, or Roulette?'
          user_bet
        end
@@ -24,7 +26,13 @@ class Casino
     end
 end
 casino = Casino.new        
-casino.main_menu
+
+def casino.main_menu
+ask_age
+@casino
+@main_choices
+
+end
 
 def ask_age(player_name)
     puts " Nice of you to join us tonight #{player_name}. I also need to see some I.D.  How old are you?"
@@ -48,9 +56,30 @@ def ask_age(player_name)
   puts player_one.name
   puts player_one.age
   puts player_one.wallet
+
+  
+  
 # start on player next step
 
 # rand(10) => a random number between 0 and 9
 
 # color = 100% payout (other than green)
 # number = 3500% payout
+class Main_choices
+    puts "What would you like to do #{player_name}?"
+    puts "1. Show your winnings"
+    puts "2. Choose a different game"
+    puts "3. Leave the casino"
+    choice = gets.to_i
+    if choice == 1
+      bank_role
+      #show_pets
+    elsif choice == 2
+      show_wallet
+     
+    elsif choice == 3
+      puts "Come back soon!"
+      exit
+    end
+  end
+  
