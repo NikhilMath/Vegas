@@ -26,7 +26,28 @@ end
 casino = Casino.new        
 casino.main_menu
 
-
+def ask_age(player_name)
+    puts " Nice of you to join us tonight #{player_name}. I also need to see some I.D.  How old are you?"
+    new_age = gets.to_i
+   if new_age < 21 
+     puts "Sorry pal, try agin when you're older! Next time I'll put your name in the black book! Go on, Get OUTA here!" 
+     exit
+   else new_age  
+     puts "Alright #{player_name} get ready for some action!"
+     return new_age
+   end
+     
+  end
+  puts "Please type in your name"
+   new_player_name = gets.strip
+  player_age = ask_age(new_player_name)
+  puts "please type in your wallet amount"
+  player_wallet = gets.to_f
+  
+  player_one = Player.new(new_player_name, player_age, player_wallet)
+  puts player_one.name
+  puts player_one.age
+  puts player_one.wallet
 # start on player next step
 
 # rand(10) => a random number between 0 and 9
