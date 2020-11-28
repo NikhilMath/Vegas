@@ -1,14 +1,25 @@
+#Basic Objectives:
+
+#Start game player has a name and an initial bankroll
+#Player can go to different games via menu
+#Slots
+#Roulette
+#Player places bet and wins / loses (hint: rand)
+#Player's bankroll goes up and down with wins and losses
+
+
 #have player put name in
 #have player decide how much is in his wallet.
 #have the winnings add to his wallet or losings
 #check Id, make sure player is of age
 
-
-#person_1 = Person.new
-
-
 #require_relative "roulette
 
+def main_menu
+  @player
+  @main_choices
+  @Bank_role
+end
 
 class Player
   attr_accessor :name, :age, :wallet
@@ -48,6 +59,24 @@ puts player_one.name
 puts player_one.age
 puts player_one.wallet
 
+class Main_choices
+  puts "What would you like to do player?"
+  puts "1. Show your winnings"
+  puts "2. Go to the Roulette table"
+  puts "3. Got to the Slots!"
+  puts "4. Leave the casino"
+  choice = gets.to_i
+  if choice == 1
+    bank_role
+  elsif choice == 2
+    roulette
+  elsif choice == 3
+    slots
+  else choice == 4
+    puts "Come back soon!"
+    exit
+  end
+  end
 
 class Bank_role
   attr_accessor :winnings, :losings
@@ -78,29 +107,7 @@ def decrease_losings(number)
   end
   
   
-  def main_menu
-    @player
-    @Bank_role
-    main_choices
-  end 
   
-  def main_choices
-  puts "What would you like to do #{player_name}?"
-  puts "1. Show your winnings"
-  puts "2. Choose a differnt game"
-  puts "3. Leave the casino"
-  choice = gets.to_i
-  if choice == 1
-    bank_role
-  elsif choice == 2
-    roulette
-    slots
-   
-  elsif choice == 3
-    puts "Come back soon!"
-    exit
-  end
-  end
   end
   #main_menu
   #def buy_in
