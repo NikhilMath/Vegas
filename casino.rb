@@ -66,20 +66,21 @@ def ask_age(player_name)
 # color = 100% payout (other than green)
 # number = 3500% payout
 class Main_choices
-    puts "What would you like to do #{player_name}?"
-    puts "1. Show your winnings"
-    puts "2. Choose a different game"
-    puts "3. Leave the casino"
-    choice = gets.to_i
-    if choice == 1
-      bank_role
-      #show_pets
-    elsif choice == 2
-      show_wallet
-     
-    elsif choice == 3
-      puts "Come back soon!"
-      exit
-    end
+  puts "What would you like to do player?"
+  puts "1. Show your winnings"
+  puts "2. Go to the Roulette table"
+  puts "3. Got to the Slots!"
+  puts "4. Leave the casino"
+  choice = gets.to_i
+  if choice == 1
+    bank_role
+  elsif choice == 2
+    roulette
+  elsif choice == 3
+    slots
+  else choice == 4
+    puts "Come back soon!"
+    exit
+  end
   end
   
