@@ -1,7 +1,7 @@
 #21
 require_relative 'deck'
 
-class Twenty_one
+class High_low
   def initialize(player)
     @player = player
     @deck = Deck.new
@@ -11,7 +11,7 @@ class Twenty_one
 
   def play
     puts "How much do you want to wager?"
-      wager = gets.strip.to_i
+      wager =  #{wallet}
       if wager > 0
         first_card = @deck.pull_card
         second_card = @deck.pull_card
