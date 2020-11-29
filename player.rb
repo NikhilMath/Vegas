@@ -13,12 +13,12 @@
 #have the winnings add to his wallet or losings
 #check Id, make sure player is of age
 
-#require_relative "roulette
+require_relative 'twenty_one'
 
 def main_menu
   @player
   @main_choices
-  @Bank_role
+ # @Bank_role
 end
 
 class Player
@@ -34,8 +34,6 @@ class Player
     @age += number
   end
  end
-
-
  def ask_age(player_name)
   puts " Nice of you to join us tonight #{player_name}. I also need to see some I.D.  How old are you?"
   new_age = gets.to_i
@@ -67,11 +65,11 @@ class Main_choices
   puts "4. Leave the casino"
   choice = gets.to_i
   if choice == 1
-    bank_role
+    wallet
   elsif choice == 2
     roulette
   elsif choice == 3
-    slots
+    twenty_one
   else choice == 4
     puts "Come back soon!"
     exit
