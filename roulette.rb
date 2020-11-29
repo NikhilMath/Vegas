@@ -8,11 +8,11 @@ end
 def win_maybe
   if @answer == bet
     puts "you win"
-    win = Wallet.increase_money(bet=*35)
+    win = Wallet.increase_money(35)
     puts "your money in your wallet is: #{Money}"
   else
     puts "you lose"
-    Money / 34
+    Money / 35
     puts "your money in your wallet is: #{Money}"
   end
 end
